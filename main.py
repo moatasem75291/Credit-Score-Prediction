@@ -1,4 +1,5 @@
 import streamlit as st
+from frontend import EDA, Predictions
 
 st.set_page_config(
     page_title="Credit Score Prediction",
@@ -7,9 +8,14 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 
+st.sidebar.title("Navigation")
+page = st.sidebar.radio("Go to", ["EDA", "Predictions"])
+
 st.title("💳 Credit Score Prediction System")
-st.markdown(
-    """
+
+if page == "EDA":
+    st.markdown(
+        """
     Welcome to the Credit Score Prediction System! This application allows you to:
     - Upload your dataset and explore it using **Exploratory Data Analysis (EDA)** tools.
     - Predict credit score categories for customers based on their financial and credit information.
@@ -24,4 +30,9 @@ st.markdown(
     ---
     Navigate through the pages using the sidebar to begin!
     """
-)
+    )
+    EDA.run()
+elif page == "Predictions":
+    Predictions.run()
+
+st.sidebar.info("Choose a feature from the sidebar to begin!")
