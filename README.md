@@ -1,5 +1,7 @@
 # Credit Score Prediction with Machine Learning
 
+[CLICK ON ME TO TEST THE MODEL](https://credit-score-moatasem.streamlit.app/)
+
 This project aims to predict credit scores based on individual financial data using machine learning models. The backend is a Flask-based API that handles prediction logic, while the frontend is a Streamlit application that visualizes the results and provides an interactive user experience.
 
 ## Project Overview
