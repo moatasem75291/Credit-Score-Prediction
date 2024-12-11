@@ -5,7 +5,9 @@ from joblib import load
 
 from processing.preprocessing import preprocess_data
 
-model_path = os.path.join("backend", "models", "voting_classifier.joblib")
+# model_path = os.path.join("backend", "models", "voting_classifier.joblib")
+print(os.getcwd())
+model_path = "models/voting_classifier.joblib"
 model = load(model_path)
 app = Flask(__name__)
 
